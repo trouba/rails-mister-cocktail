@@ -1,0 +1,17 @@
+<h1><%= @cocktail.name %></h1>
+<% counter = 1 %>
+<% @cocktail.doses.each do |dose| %>
+
+  <p><%= "Ingrédient: " + dose.ingredient.name %></p>
+  <p>
+    <%= counter %>
+    <%= "-" %>
+    <%= dose.description %>
+    <%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose), method: :delete%>
+  </p>
+
+
+  <% counter += 1 %>
+<% end %>
+<hr>
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info"%>

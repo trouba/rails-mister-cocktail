@@ -1,0 +1,27 @@
+<div class="cover">
+  <h1>Cocktails</h1>
+</div>
+
+<%= link_to "Create new cocktail", new_cocktail_path, class: "btn btn-info"%>
+<hr>
+<div class="row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-6 col-sm-4 col-md-3">
+      <%= link_to cocktail_path(cocktail) do %>
+        <div >
+          <h4><i class="fa fa-glass" aria-hidden="true"></i><%= cocktail.name.upcase %></h4>
+          <% cocktail.doses.each do |dose| %>
+            <%= dose.ingredient.name %>
+          <% end %>
+        </div>
+     <%end%>
+    </div>
+  <% end %>
+</div>
+<div class="row">
+  <h3>Available ingredients:</h3>
+  <% Ingredient.all.each do |ingredient| %>
+  <%= ingredient.name %>
+  <% end %>
+</div>
+

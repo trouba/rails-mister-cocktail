@@ -1,0 +1,8 @@
+<h1>Add dose for <%=@cocktail.name%></h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, as: :select, collection: Ingredient.all, include_blank:  "Select an ingredient" %>
+  <%= f.button :submit, "Add dose" %>
+<% end %>
+
+
