@@ -1,0 +1,17 @@
+.card {
+  height:200px;
+  margin-bottom: 40px;
+  border-bottom: solid 2px #413341;
+  background-size: cover !important;
+  padding: 10px;
+}
+
+.card h4 {
+  color:white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: all .5s ease-in-out;
+}
+
+.card:hover { transform: scale(1.1); }
+
