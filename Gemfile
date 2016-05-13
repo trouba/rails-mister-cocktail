@@ -46,6 +46,13 @@ gem 'autoprefixer-rails'
 #Gem figaro
 gem 'figaro'
 
+#Gem cloudinary
+gem 'cloudinary'
+
+#Gem upload files
+gem 'carrierwave'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

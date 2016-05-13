@@ -19,3 +19,7 @@ Ingredient.create(name: "milk")
 Ingredient.create(name: "vodka")
 Ingredient.create(name: "gin")
 Ingredient.create(name: "rhum")
+Ingredient.create(name: "tequila")
+Ingredient.create(name: "cointreau")
+
+
